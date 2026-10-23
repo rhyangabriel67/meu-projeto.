@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Cliques</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f4f8;
+      padding: 50px;
+    }
+
+    main {
+      background: white;
+      max-width: 400px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+    }
+
+    #total {
+      font-size: 48px;
+      color: #2563eb;
+    }
+
+    button {
+      padding: 12px 18px;
+      margin: 5px;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #adicionar {
+      background: #2563eb;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Contador de Cliques</h1>
+    <p>Clique no botão e veja o número aumentar.</p>
+
+    <div id="total">0</div>
+
+    <button id="adicionar">Adicionar ponto</button>
+    <button id="zerar">Zerar</button>
+  </main>
+
+  <script>
+    let pontos = 0;
+
+    const total = document.getElementById("total");
+
+    document.getElementById("adicionar").addEventListener("click", function() {
+      pontos++;
+      total.textContent = pontos;
+    });
+
+    document.getElementById("zerar").addEventListener("click", function() {
+      pontos = 0;
+      total.textContent = pontos;
+    });
+  </script>
+</body>
+</html>
